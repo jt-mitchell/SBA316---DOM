@@ -21,8 +21,10 @@ function newTask() {
     inputTask.value = "";
     const delBtn = document.createElement("button");
     delBtn.textContent = "Delete";
+
     li.appendChild(delBtn);
     delBtn.addEventListener("click", deleteTask);
+    delBtn.style.margin = "20 px";
   }
 }
 btn.addEventListener("click", newTask);
@@ -44,3 +46,13 @@ function deleteTask(event) {
 // delBtn.textContent = "Delete";
 // li.appendChild(delBtn);
 // delBtn.addEventListener("click", deleteTask);
+
+// Counts the number of clicks
+let count = 0;
+let button = document.querySelector(".counter");
+let countDisplay = document.querySelector(".display");
+
+button.addEventListener("onclick", function () {
+  count++;
+  countDisplay.innerHTML = count;
+});
