@@ -6,20 +6,24 @@ document.querySelector("body").style.backgroundColor = "green";
 
 //Todo List
 const inputTask = document.querySelector("#input");
-const listTask = document.querySelector("#tasklist");
+const listTask = document.querySelector("#listTask");
+console.log(document.querySelector("inputTask"));
 
 //Create new tasks
+let btn = document.querySelector("button");
+
 function newTask() {
-  const taskText = inputTask.value.trim();
-  if (taskText !== " ") {
+  const taskText = inputTask.value;
+  if (taskText !== "") {
     const li = document.createElement("li");
     li.textContent = taskText;
     listTask.appendChild(li);
-    inputTask.value = " ";
+    inputTask.value = "";
   }
 }
+btn.addEventListener("click", newTask);
 // Task completion
-function completTask(event) {
+function completeTask(event) {
   const task = event.target;
   task.classlist.toggle("completed");
 }
@@ -31,6 +35,7 @@ function deleteTask(event) {
   const task = event.target.ParentElement;
   listTask.removeChild(task);
 }
+
 const delBtn = document.createElement("button");
 delBtn.textContent = "Delete";
 delBtn.addEventListener("click", deleteTask);
