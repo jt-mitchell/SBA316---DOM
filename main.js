@@ -19,6 +19,10 @@ function newTask() {
     li.textContent = taskText;
     listTask.appendChild(li);
     inputTask.value = "";
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Delete";
+    li.appendChild(delBtn);
+    delBtn.addEventListener("click", deleteTask);
   }
 }
 btn.addEventListener("click", newTask);
@@ -32,11 +36,11 @@ li.addEventListener("click", completeTask);
 //Task removal
 
 function deleteTask(event) {
-  const task = event.target.ParentElement;
+  const task = event.target.parentElement;
   listTask.removeChild(task);
 }
 
-const delBtn = document.createElement("button");
-delBtn.textContent = "Delete";
-delBtn.addEventListener("click", deleteTask);
-li.appendChild(delBtn);
+// const delBtn = document.createElement("button");
+// delBtn.textContent = "Delete";
+// li.appendChild(delBtn);
+// delBtn.addEventListener("click", deleteTask);
