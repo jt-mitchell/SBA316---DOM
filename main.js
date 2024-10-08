@@ -1,4 +1,17 @@
+//Date and Time on webpage.
+
+function upDateTime() {
+  const now = new Date();
+
+  const currentDate = now.toLocaleString();
+
+  document.querySelector("#datetime").textContent = currentDate;
+}
+
+setInterval(upDateTime, 1000);
+
 //caches using getElementByID - creates message in HTML file.
+
 const top6mess = document.getElementById("top6");
 top6mess.textContent = "My Top Chessplayers:";
 
@@ -72,11 +85,3 @@ function changeIt() {
 //   count++;
 //   countDisplay.innerHTML = count;
 // });
-
-function upDateTime() {
-  const now = new Date();
-  const currentDate = now.toLocaleString();
-  document.querySelector("#datetime").textContent = currentDate;
-}
-
-setInterval(upDateTime, 1000);
