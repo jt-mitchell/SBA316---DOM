@@ -9,6 +9,9 @@
   <body>
     <h1>My Web App</h1>
     <div class="container">
+    <h3> Current Date and Time: </h3>    
+        <span id ="datetime"></span>
+
     <p>Lorem ipsum</p>
     <p> Blue Streak</p>
     <p>The Matrix</p>
@@ -35,16 +38,19 @@
     <div id="todo">
         <h2>Todo List</h2>
         <input type="text" id="input" placeholder="Add new todo item">
-        <button>Add Todo</button>
+        <button id="bop">Add Todo</button>
         <ul id="listTask">
             <!-- <li></li> -->
         </ul>
         <hr>
-    </div>
-    <button class="counter">Click Me!</button> 
-    <p>
-        I have been clicked <span class="display">0</span> Times!
+    </div >
+    <p id="myText">
+        Click the button below to change the text!
     </p>
+    <button onclick="changeIt()">Click Me!</button> 
+    
     <script src="main.js"></script>
   </body>
 </html>
+
+
