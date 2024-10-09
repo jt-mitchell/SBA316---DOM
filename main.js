@@ -62,16 +62,17 @@ function newTask() {
 
     li.appendChild(delBtn);
     delBtn.addEventListener("click", deleteTask);
-    delBtn.style.margin = "20 px";
+    //delBtn.style.margin = "20 px";
   }
 }
 btn.addEventListener("click", newTask);
 // Task completion
 function completeTask(event) {
   const task = event.target;
+  const li = li.addEventListener("click", completeTask);
+
   task.classlist.toggle("completed");
 }
-const li = li.addEventListener("click", completeTask);
 
 //Task removal
 
