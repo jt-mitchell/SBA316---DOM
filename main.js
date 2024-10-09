@@ -17,6 +17,30 @@ top6mess.textContent = "My Top Chessplayers:";
 
 document.querySelector("body").style.backgroundColor = "green";
 
+// Array that will poplulate <li> </li> in index.html
+
+let chessMaster = [
+  "Magnus Carlsen",
+  "Gary Kasparov",
+  "Bobby Fischer",
+  "Mikhail Botvinnik",
+  "Anatoly Karpov",
+  "Vishy Anand",
+  "David Bronstein",
+  "Mikhail Tal",
+  "Capablanca, Jose Raoul",
+];
+
+//Loop to populate <ul></ul> with <li></li> items.
+
+let list = document.querySelector("#list1");
+for (let i = 0; i < chessMaster.length; i++) {
+  // const element = chessMaster[i];
+  let li = document.createElement("li");
+  li.textContent = chessMaster[i];
+  list.appendChild(li);
+}
+
 //Todo List
 const inputTask = document.querySelector("#input");
 const listTask = document.querySelector("#listTask");
@@ -47,7 +71,7 @@ function completeTask(event) {
   const task = event.target;
   task.classlist.toggle("completed");
 }
-li.addEventListener("click", completeTask);
+const li = li.addEventListener("click", completeTask);
 
 //Task removal
 
